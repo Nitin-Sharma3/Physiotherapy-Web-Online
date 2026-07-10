@@ -338,6 +338,29 @@ img { max-width: 100%; display: block; }
 
 .hero-copy { display: flex; flex-direction: column; gap: 28px; max-width: 560px; }
 
+.hero-welcome {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+.hero-welcome span {
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  display: block;
+  margin-top: 4px;
+  line-height: 1.1;
+}
+@media (min-width: 1024px) {
+  .hero-welcome span { font-size: 36px; }
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -807,6 +830,24 @@ img { max-width: 100%; display: block; }
   max-width: 680px;
 }
 
+.doctor-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.credential-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background: var(--surface-container-lowest);
+  border: 1px solid rgba(0,53,95,0.12);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .doctor-panel {
   background: var(--surface-container-lowest);
   border: 1px solid rgba(194,199,209,0.35);
@@ -830,8 +871,20 @@ img { max-width: 100%; display: block; }
   padding: 12px 14px;
   background: var(--surface-container-low);
   border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.doctor-name {
   color: var(--primary);
   font-weight: 700;
+  font-size: 15px;
+}
+.doctor-meta {
+  color: var(--on-surface-variant);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 .about-contact {
@@ -930,6 +983,12 @@ img { max-width: 100%; display: block; }
   color: var(--on-surface-variant);
   font-size: 14px;
   margin: 4px 0;
+}
+.footer-doctor-note {
+  margin-top: 10px !important;
+  color: var(--primary) !important;
+  font-weight: 600;
+  font-size: 13px !important;
 }
 .social-row { display: flex; gap: 12px; }
 .social-btn {
@@ -1252,25 +1311,24 @@ img { max-width: 100%; display: block; }
   }
 
   .header-inner {
-    height: 76px;
+    height: 64px;
   }
   .site-header.scrolled .header-inner {
-    height: 68px;
+    height: 60px;
   }
   .brand-logo {
-    height: 64px;
-    width: 64px;
-  }
-  .site-header.scrolled .brand-logo {
-    height: 52px;
-    width: 52px;
+    display: none;
   }
   .brand-name {
-    max-width: 180px;
-    font-size: 16px;
+    max-width: none;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+  }
+  .site-header.scrolled .brand-name {
+    font-size: 22px;
   }
   .mobile-drawer {
-    top: 76px;
+    top: 64px;
   }
 
   .hero {
@@ -1281,6 +1339,12 @@ img { max-width: 100%; display: block; }
   }
   .hero-copy {
     gap: 20px;
+  }
+  .hero-welcome {
+    font-size: 13px;
+  }
+  .hero-welcome span {
+    font-size: 32px;
   }
   .hero-title {
     font-size: 31px;
